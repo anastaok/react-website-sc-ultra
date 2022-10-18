@@ -6,8 +6,9 @@ const Home = () => {
   return (
     <>
       <InfoSection {...homeObjOne} />
-      <InfoSection {...homeObjTwo} />
       <InfoSection {...homeObjThree} />
+
+      <InfoSection {...homeObjTwo} />
       <InfoSection {...homeObjFour} />
     </>
   );

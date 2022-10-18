@@ -11,7 +11,7 @@ const InfoSection = ({
   imgStart,
   lightText,
   lightTopLine,
-  lightTextDecs,
+  lightTextDesc,
   buttonLabel,
   description,
   headline,
@@ -31,7 +31,7 @@ const InfoSection = ({
                 <Styled.Heading lightText={lightText}>
                   {headline}
                 </Styled.Heading>
-                <Styled.Subtitle lightTextDecs={lightTextDecs}>
+                <Styled.Subtitle lightTextDesc={lightTextDesc}>
                   {description}
                 </Styled.Subtitle>
                 <Link to="/sign-up">
