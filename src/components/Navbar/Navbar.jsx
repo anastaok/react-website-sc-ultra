@@ -9,6 +9,7 @@ const Navbar = () => {
   const [button, setButton] = useState(true);
 
   const handleClick = () => setClick(!click);
+  const closeMobileMenu = () => setClick(false);
 
   const showButton = () => {
     if (window.innerWidth <= 960) {
@@ -29,7 +30,7 @@ const Navbar = () => {
       <IconContext.Provider value={{ color: "#fff" }}>
         <Styled.Nav>
           <Styled.NavbarContainer>
-            <Styled.NavLogo to="/">
+            <Styled.NavLogo to="/" onClick={closeMobileMenu}>
               <Styled.NavIcon />
               ULTRA
             </Styled.NavLogo>
@@ -39,15 +40,21 @@ const Navbar = () => {
 
             <Styled.NavMenu onClick={handleClick} click={click}>
               <Styled.NavItem>
-                <Styled.NavLink to="/">Home</Styled.NavLink>
+                <Styled.NavLink to="/" onClick={closeMobileMenu}>
+                  Home
+                </Styled.NavLink>
               </Styled.NavItem>
 
               <Styled.NavItem>
-                <Styled.NavLink to="/services">Services</Styled.NavLink>
+                <Styled.NavLink to="/services" onClick={closeMobileMenu}>
+                  Services
+                </Styled.NavLink>
               </Styled.NavItem>
 
               <Styled.NavItem>
-                <Styled.NavLink to="/products">Products</Styled.NavLink>
+                <Styled.NavLink to="/products" onClick={closeMobileMenu}>
+                  Products
+                </Styled.NavLink>
               </Styled.NavItem>
               <Styled.NavItemBtn>
                 {button ? (
@@ -56,7 +63,7 @@ const Navbar = () => {
                   </Styled.NavBtnLink>
                 ) : (
                   <Styled.NavBtnLink to="/sign-up">
-                    <Button fontBig primary>
+                    <Button onClick={closeMobileMenu} fontBig primary>
                       SIGN UP
                     </Button>
                   </Styled.NavBtnLink>

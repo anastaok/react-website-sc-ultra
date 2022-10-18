@@ -20,7 +20,7 @@ import {
   PricingCardFeature,
 } from "./PricingStyles";
 
-function Pricing() {
+const Pricing = () => {
   return (
     <IconContext.Provider value={{ color: "#a9b3c1", size: 64 }}>
       <PricingSection>
@@ -80,5 +80,5 @@ function Pricing() {
       </PricingSection>
     </IconContext.Provider>
   );
-}
+};
 export default Pricing;

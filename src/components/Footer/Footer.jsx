@@ -28,7 +28,7 @@ import {
   SocialIconLink,
 } from "./FooterStyles";
 
-function Footer() {
+const Footer = () => {
   return (
     <FooterContainer>
       <FooterSubscription>
@@ -111,6 +111,6 @@ function Footer() {
       </SocialMedia>
     </FooterContainer>
   );
-}
+};
 
 export default Footer;

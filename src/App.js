@@ -7,11 +7,13 @@ import Services from "./pages/Services/Services";
 import Products from "./pages/Products/Products";
 import SignUp from "./pages/SignUp/SignUp";
 import Footer from "./components/Footer/Footer";
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   return (
     <Router>
       <GlobalStyle />
+      <ScrollToTop />
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
